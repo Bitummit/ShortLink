@@ -1,5 +1,6 @@
 from pathlib import Path
 import string
+import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -53,7 +54,7 @@ WSGI_APPLICATION = 'Shortlink.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR + '/db.sqlite3',
     }
 }
 
