@@ -5,11 +5,10 @@ import HandshakeOutlinedIcon from "@mui/icons-material/HandshakeOutlined";
 import Block from "./components/block/Block";
 
 function App() {
-  const [shortLink, setShortLink] = useState("");
 
   return (
     <div className="app">
-      <div className="content">
+      <div className="main">
         <h1 className="title">
           <HandshakeOutlinedIcon className="icon" />
           Shorter
@@ -19,8 +18,8 @@ function App() {
           короткой ссылке клиентам не придётся видеть длинные url-адреса,
           занимающие много места.
         </p>
-        <Form setShortLink={setShortLink}/>
-        <Block shortLink={shortLink}/>
+        <Form />
+        
       </div>
     </div>
   );
