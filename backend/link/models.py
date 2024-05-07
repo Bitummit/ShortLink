@@ -13,9 +13,9 @@ class Link(models.Model):
         if not self.short_link:
             while True:
                 generated_link = "".join(
-                    random.choices(CHARACTERS_FOR_LINKS), k=LINK_LENGTH
+                    random.choices(CHARACTERS_FOR_LINKS, k=LINK_LENGTH)
                 )
-                if not Link.objects.filter(short_link=generated_link).exists:
+                if not Link.objects.filter(short_link=generated_link).exists():
                     self.short_link = generated_link
                     break
         

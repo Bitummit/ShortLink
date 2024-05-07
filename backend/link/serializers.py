@@ -10,7 +10,7 @@ class LinkSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         full_link = validated_data["full_link"]
-        link, created = Link.objects.get_or_create(full_link=link.full_link)
+        link, created = Link.objects.get_or_create(full_link=full_link)
         if created:
             status_code = status.HTTP_201_CREATED
         else:

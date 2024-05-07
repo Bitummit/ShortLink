@@ -8,7 +8,7 @@ class LinkAPIView(APIView):
     
     def post(self, request):
         serializer = LinkSerializer(data=request.data)
-        if serializer.is_valid:
+        if serializer.is_valid():
             link, status_code = serializer.create(
                 validated_data=serializer.validated_data
             )

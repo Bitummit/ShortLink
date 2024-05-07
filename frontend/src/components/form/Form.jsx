@@ -1,12 +1,20 @@
 import "./form.scss";
 import { useState } from "react";
+import axios from "axios";
 
 export default function Form() {
   const [link, setLink] = useState("");
 
   function handleSubmit(event) {
-    console.log(event.target);
+    
     event.preventDefault();
+
+    axios.post("http://127.0.0.1:8000/api/links/", {
+        full_link: link,
+    })
+    .then((response) => {
+      console.log(response);
+    });
   }
 
   function handleChange(event) {
