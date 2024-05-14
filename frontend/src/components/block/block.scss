@@ -1,5 +1,19 @@
 .block {
-    border-radius: 20px;
-    background-color: white;
-    color: black;
+  margin-top: 20px;
+  border-radius: 20px;
+
+  .link {
+    display: flex;
+    align-items: center;
+    &:hover {
+      color: rgb(212, 212, 212);
+    }
+
+    a {
+      color: white;
+      &:hover {
+        color: rgb(212, 212, 212);
+      }
+    }
+  }
 }

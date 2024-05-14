@@ -31,7 +31,7 @@ export default function Form() {
           Short!
         </button>
       </form>
-      <Block shortLink={shortLink} />
+      {shortLink ? <Block shortLink={shortLink} /> : <></>}
     </div>
   );
 }
